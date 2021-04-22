@@ -2,7 +2,7 @@
 
 ## TODO:
 * ~~virtualenv~~
-* accept and validate input
+* ~~accept and validate input~~
 * accept file input
 * fetch city data from API
 * fetch Country and Currency fields
