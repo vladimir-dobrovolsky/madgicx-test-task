@@ -44,6 +44,7 @@ def fetch_from_API(name):
                 # "City": data["results"][0]["name"],
                 "Country": data["results"][0]["country"]["name"],
                 "Currency": data["results"][0]["country"]["currency"],
+                "Population": data["results"][0]["population"],
             }
 
             # if multiple currencies, return only first
