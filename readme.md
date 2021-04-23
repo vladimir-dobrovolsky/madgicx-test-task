@@ -15,3 +15,35 @@ BACK4APP_REST_API_APP_ID={your_app_id}
 BACK4APP_REST_API_KEY={your_app_key}
 ```
 
+## Usage
+This app can accept city names as arguments
+
+```
+python madgicx_geo.py new yOrk
+python madgicx_geo.py Kiyv, Tokyo
+```
+
+or inside a text file
+
+```
+python madgicx_geo.py -f cities.txt
+```
+
+```
+cities.txt:
+
+Tel Aviv
+Kyiv
+New York
+```
+
+and outputs information about them
+
+```
+=> ​ Kyiv
+=>-------------
+=>Country: Ukraine
+=>Currency: UAH
+=>Population: 2797553
+=>-------------
+```
