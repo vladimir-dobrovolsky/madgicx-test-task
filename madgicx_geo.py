@@ -91,7 +91,7 @@ def get_data(name=None, file=None):
     if len(cities) > 0:
         for i in cities:
             result = fetch_from_API(i)
-            click.echo(f"=>{' ' * 2}{i}")
+            click.echo(f"=> ​ {i}")
             click.echo(separator)
             if result:
                 for k, v in result.items():

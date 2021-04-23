@@ -1,19 +1,17 @@
 # GeoInsightFetcher CLI tool
 
-## TODO:
-* ~~virtualenv~~
-* ~~accept and validate input~~
-* ~~accept file input~~
-* ~~fetch city data from API~~ ~~(+rate limiting)~~
-* ~~fetch Country and Currency fields~~
-* ~~error messages~~
-* readme (~~api keys~~)
+This app fetches city data from Back4App REST API with keys obtained from example app code on [this page](https://www.back4app.com/database/back4app/list-of-all-continents-countries-cities/get-started/python/rest-api/requests?objectClassSlug=world-cities-dataset-api)
 
 ## Setup
-This app fetches city data from Back4App REST API with keys provided for example app
-https://www.back4app.com/database/back4app/list-of-all-continents-countries-cities/get-started/python/rest-api/requests?objectClassSlug=world-cities-dataset-api
+####1. create a new virtual environment
+####2. install dependencies from requirements.txt
+`pip install -r requirements.txt`
+####3. provide API credentials
 
 API credentials are fetched from environment variables and  may be provided in .env file in the project root
 
-BACK4APP_REST_API_APP_ID= _app id_
-BACK4APP_REST_API_KEY= _app key_
+```
+BACK4APP_REST_API_APP_ID={your_app_id}
+BACK4APP_REST_API_KEY={your_app_key}
+```
+
