@@ -59,19 +59,28 @@ def fetch_from_API(name):
 
 
 @click.command()
+@click.option("-f", "file", type=click.Path(exists=True))
 @click.argument("name", nargs=-1, type=click.STRING)
-def get_data(name):
+def get_data(name=None, file=None):
     """
     GeoInsightFetcher is a tool that gets a name of a city (or multiple)
     and returns some interesting insights about it.
     """
 
-    if len(name) == 0:
-        name = [input("Please enter a city name: ")]
+    if file:
+        with open(click.format_filename(file)) as txt:
+            cities = list()
+            for city in txt.readlines():
+                cities.append(city)
 
-    # formatting city names
-    cities = " ".join(name)
-    cities = cities.split(",")
+    else:
+        if len(name) == 0:
+            name = [input("Please enter a city name: ")]
+
+        # formatting city names
+        cities = " ".join(name)
+        cities = cities.split(",")
+
     # city name must contain at least 3 characters
     cities = list(filter(lambda x: len(x) >= 3, cities))
     cities = list(map(lambda city: city.strip().lower().title(), cities))

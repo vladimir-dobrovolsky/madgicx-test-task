@@ -3,7 +3,7 @@
 ## TODO:
 * ~~virtualenv~~
 * ~~accept and validate input~~
-* accept file input
+* ~~accept file input~~
 * ~~fetch city data from API~~ ~~(+rate limiting)~~
 * ~~fetch Country and Currency fields~~
 * ~~error messages~~
